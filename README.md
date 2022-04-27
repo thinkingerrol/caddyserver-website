@@ -1,7 +1,7 @@
 The Caddy Website
 =================
 
-This is the source of the Caddy website, [caddyserver.com](https://caddyserver.com).
+This is a fork of the source of the Caddy website, [caddyserver.com](https://caddyserver.com).
 
 
 ## Requirements
@@ -11,11 +11,10 @@ This is the source of the Caddy website, [caddyserver.com](https://caddyserver.c
 
 ## Quick start
 
-1. `git clone https://github.com/caddyserver/website.git`
+1. `git clone git@github.com:thinkingerrol/caddyserver-website.git`
 2. `cd website`
-3. `caddy run`
-
-Your first time, you may be prompted for a password. This is so Caddy can serve the site over local HTTPS. If you can't bind to low ports, change [the address at the top of the Caddyfile](https://github.com/caddyserver/website/blob/master/Caddyfile#L1), for example `localhost:2015`.
+3. `docker volume create --name=caddy_data`
+4. `docker-compose up`
 
 You can then load [https://localhost](https://localhost) (or whatever address you configured) in your browser.
 
